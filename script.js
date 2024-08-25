@@ -16,7 +16,7 @@ function getTasksBegin(toDo) {
   toDoItem.innerHTML = `
   <input class = 'toDo__item-check' type="checkbox">
   <p class="toDo__item-text">${toDo.task}</p>
-  <form class = "toDo__form-edit"><input value = ${toDo.task} class="toDo__input-text toDo__input-text-none"/>
+  <form class = "toDo__form-edit"><input value = "${toDo.task}" class="toDo__input-text toDo__input-text-none"/>
   <button class = "toDo__button-edit">✏️</button>
   <button class = "toDo__check-edit toDo__check-edit-done">✅</button>
     </form>
@@ -37,6 +37,7 @@ function getTasksBegin(toDo) {
   const shoppingListItem = toDoItem.querySelector(".toDo__input-text");
   const shoppingListItemText = toDoItem.querySelector(".toDo__item-text");
   const editForm = toDoItem.querySelector(".toDo__form-edit");
+
   editForm.addEventListener("submit", (evt) => {
     evt.preventDefault();
     shoppingListItem.classList.toggle("toDo__input-text-none");
@@ -44,13 +45,17 @@ function getTasksBegin(toDo) {
     buttonEdit.classList.toggle("toDo__button-edit-done");
     buttonEditDone.classList.toggle("toDo__check-edit-done");
     shoppingListItemText.innerText = shoppingListItem.value;
+    // if (shoppingListItemText.classList.contains("toDo__item-text-none")) {
+    //   editForm.setAttribute("disabled", "")
+    //   buttonEditDone.setAttribute("disabled", "")
+    // }
     replaceTaskText(toDo.id);
   });
   // функция по замене текста в таске
   function replaceTaskText(id) {
     let findText = taskArr.find((element) => element.id === id);
     if (shoppingListItem.value.length == 0) {
-      findText.task = "error";
+      findText.task = findText.task;
       renderTasks(taskArr);
     } else {
       findText.task = shoppingListItem.value;

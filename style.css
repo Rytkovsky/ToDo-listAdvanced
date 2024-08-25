@@ -122,6 +122,7 @@ p {
   display: flex;
   margin-bottom: 25px;
   align-items: center;
+  justify-content: space-between;
 }
 
 .toDo__list .toDo__item:first-child {
@@ -135,7 +136,7 @@ p {
 }
 
 .toDo__item-check {
-  width: 20px;
+  width: 16px;
   height: 16px;
   accent-color: #7749f8;
 }
@@ -148,15 +149,13 @@ p {
 }
 
 .toDo__item-text {
-  color: red;
-  margin: 0 16px;
   padding: 0 10px;
   color: #54595e;
   font-family: Inter;
   font-size: 16px;
   font-weight: 400;
   line-height: 21px;
-  width: 100%;
+  width: 407px;
 }
 
 .toDo__item-text-none {
@@ -164,20 +163,21 @@ p {
 }
 
 .toDo__form-edit {
+  gap: 5px;
   display: flex;
   align-items: center;
 }
 
 .toDo__input-text {
-  margin: 0 16px;
   padding: 0 10px;
-  height: 38px;
+  height: 30px;
   color: #54595e;
   font-family: Inter;
   font-size: 16px;
   font-weight: 400;
   line-height: 21px;
   width: 400px;
+  margin-left: -10px;
 }
 
 .toDo__input-text-none {
@@ -195,7 +195,6 @@ p {
 }
 
 .toDo__check-edit {
-  margin-right: 20px;
   width: 16px;
   height: 21px;
 }
