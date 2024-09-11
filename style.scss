@@ -93,7 +93,7 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 21px;
-  width: 407px;
+  width: 100%;
 }
 .toDo__item-text-none {
   display: none;
@@ -102,9 +102,15 @@
   gap: 5px;
   display: flex;
   align-items: center;
+  justify-content: end;
+  width: 100%;
+}
+.toDo__form-edit-none {
+  display: none;
 }
 
 .toDo__input-text {
+  margin-left: 5px;
   padding: 0 10px;
   height: 30px;
   color: #54595e;
@@ -112,25 +118,21 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 21px;
-  width: 400px;
-  margin-left: -10px;
+  width: 90%;
 }
 .toDo__input-text-none {
   display: none;
 }
 
 .toDo__button-edit {
-  margin-right: 20px;
-  width: 16px;
-  height: 21px;
+  margin-right: 15px;
 }
 
 .toDo__button-edit-done {
   display: none;
 }
 .toDo__check-edit {
-  width: 16px;
-  height: 21px;
+  margin-right: 15px;
 }
 
 .toDo__check-edit-done {
@@ -174,3 +176,8 @@
   font-size: 16px;
   font-weight: 600;
 }
+// @media screen and (max-width: 630px) {
+//   .toDo__input-text {
+//     width: 90%;
+//   }
+// }

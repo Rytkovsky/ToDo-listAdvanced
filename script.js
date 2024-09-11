@@ -45,10 +45,7 @@ function getTasksBegin(toDo) {
     buttonEdit.classList.toggle("toDo__button-edit-done");
     buttonEditDone.classList.toggle("toDo__check-edit-done");
     shoppingListItemText.innerText = shoppingListItem.value;
-    // if (shoppingListItemText.classList.contains("toDo__item-text-none")) {
-    //   editForm.setAttribute("disabled", "")
-    //   buttonEditDone.setAttribute("disabled", "")
-    // }
+
     replaceTaskText(toDo.id);
   });
   // функция по замене текста в таске
